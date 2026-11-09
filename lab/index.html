@@ -237,8 +237,8 @@ async function fetchLive(){
     const el=$("pillSim"); if(LIVE){ el.textContent="LIVE SENSORS "+j.time_utc.slice(11,16)+" UTC"; el.classList.remove("sim"); el.classList.add("live"); }
     else { el.textContent="SENSORS OFFLINE · last data "+Math.round(age/60)+" h ago"; }
     if(LIVE&&LIVE.weather&&LIVE.weather.temp_f!=null){ $("wTs").textContent="weather station on the lab roof"; if(state.live){ state.tout=LIVE.weather.temp_f; $("tout").value=Math.round(state.tout); } }
-    try{ let n=0; for(const i of [1,2,3]){ const p=((LIVE&&LIVE.probes)||{})["C"+i]; if(p&&p.value_f!=null){ n++; $("c"+i).innerHTML=`<div class="s">C${i}</div><div class="v">${p.value_f.toFixed(1)}<small>F</small></div><div class="s">live</div>`; } }
-      $("cState").textContent=n?n+" of 3 live":"standby · 3 sensors linked"; }catch(e){}
+    try{ let n=0; for(const i of [1,2,3]){ const p=((LIVE&&LIVE.probes)||{})["C"+i]; if(p&&p.value_f!=null){ n++; $("c"+i).innerHTML=`<div class="s">C${i}</div><div class="v">${p.value_f.toFixed(1)}<small>F</small></div><div class="s">live</div>`; } else { $("c"+i).innerHTML=`<div class="s">C${i}</div><div class="v sb">OFFLINE</div><div class="s">sensor not reporting right now</div>`; } }
+      $("cState").textContent=n?n+" of 3 reporting":"sensors offline"; }catch(e){}
     update(); renderNsgl();
   }catch(e){ LIVE=null; }
 }
