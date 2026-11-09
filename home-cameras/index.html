@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>North 50 Building Systems | Fairbanks, Alaska</title>
+<meta name="description" content="North 50 develops and tests complete building systems for demanding conditions. Window systems tested through Interior Alaska winters at our lab near Fairbanks.">
+<link rel="canonical" href="https://north50buildingsystems.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="North 50 Building Systems">
+<meta property="og:title" content="North 50 Building Systems | Fairbanks, Alaska">
+<meta property="og:description" content="Building systems tested in Alaska. Live readings from our window test lab near Fairbanks.">
+<meta property="og:url" content="https://north50buildingsystems.com/">
+<meta property="og:image" content="https://north50buildingsystems.com/img/lab-windows.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ice:#F5F2EA; --slate:#315377; --midnight:#141B3C; --amber:#F0B93F;
+  --frost:#DDE4EC; --steel:#8A98AC; --deep:#0E1330;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter',-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',ui-monospace,monospace;
+  --u:8px; --gut:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--midnight);color:var(--ice);font-family:var(--body);
+  -webkit-font-smoothing:antialiased;line-height:1.45;font-size:17px;
+  font-kerning:normal;text-rendering:optimizeLegibility;hanging-punctuation:first}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0;text-wrap:balance}
+p,li{text-wrap:pretty}
+.nb{white-space:nowrap}
+.ln{display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--steel)}
+h1,h2,h3{overflow-wrap:break-word;text-wrap:balance}
+.label .deg{white-space:nowrap}
+@media(max-width:600px){.label .sep{display:none}.label .deg{display:block;margin-top:4px}}
+html{overflow-x:hidden;overscroll-behavior-x:none}
+body{overflow-x:clip;max-width:100%}
+img,svg,iframe,video{max-width:100%}
+.dock a{min-width:0;padding-left:8px;padding-right:8px;white-space:nowrap}
+.wrap{padding:0 var(--gut);max-width:1100px;margin:0 auto}
+
+/* sticky bar */
+.bar{position:sticky;top:0;z-index:10;background:rgba(20,27,60,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(245,242,234,.14)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.bar img{height:24px;width:auto}
+.call{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;background:transparent;color:var(--amber);border:1px solid var(--amber);padding:0 14px;font-weight:500;
+  min-height:44px;display:inline-flex;align-items:center}
+.call:hover{background:var(--amber);color:var(--midnight)}
+
+/* screens */
+section{padding:44px 0;position:relative}
+section + section{border-top:1px solid rgba(245,242,234,.12)}
+.k{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+h2{font-size:clamp(34px,9vw,60px);max-width:16ch}
+p.lede{color:var(--frost);max-width:46ch;margin:20px 0 0;line-height:1.45}
+p.lede + p.lede{margin-top:14px}
+
+/* hero */
+.hero{padding:0;min-height:0;display:flex;flex-direction:column}
+.hero .photo{position:relative;height:32svh;min-height:200px;overflow:hidden}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero .photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,27,60,.15) 0%,var(--midnight) 98%)}
+.hero .copy{padding:8px var(--gut) 20px;max-width:1100px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(52px,16vw,120px);margin-top:12px}
+.hero h1 span{color:var(--amber)}
+.hero h1.quote{margin-top:14px;max-width:none;line-height:1.04}
+.hero h1.quote .a{display:block;font-size:clamp(20px,5.6vw,30px);font-weight:600;letter-spacing:-.01em;line-height:1.2;color:var(--frost);max-width:24ch;margin-bottom:14px}
+.hero h1.quote .b{display:block;font-size:clamp(40px,11.4vw,108px);color:var(--amber);line-height:1}
+.hero h1.quote .b i{display:block;font-style:normal;white-space:nowrap}
+.beats{margin:28px 0 0;padding:0;list-style:none}
+.beats li{font-family:var(--display);font-weight:800;font-size:clamp(24px,6.6vw,36px);line-height:1.15;padding:12px 0;border-top:1px solid rgba(245,242,234,.14)}
+.beats li:first-child{color:var(--amber);border-top:none;padding-top:0}
+.four{display:grid;gap:1px;background:rgba(245,242,234,.14);border:1px solid rgba(245,242,234,.14);margin-top:32px}
+.four div{background:var(--midnight);padding:22px 20px}
+.four b{font-family:var(--display);font-weight:800;font-size:22px;display:block}
+.four span{font-size:15px;color:var(--steel);display:block;margin-top:6px}
+.four em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);display:block;margin-top:10px}
+.rscale{margin-top:36px;display:grid;gap:18px}
+.rscale .r{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:baseline}
+.rscale .r span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.rscale .r b{font-family:var(--mono);font-weight:500;font-size:16px}
+.rscale .r i{grid-column:1/3;display:block;height:10px;background:var(--steel);width:var(--w)}
+.rscale .r.now span,.rscale .r.now b{color:var(--amber)}
+.rscale .r.now i{background:var(--amber)}
+.note{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);margin-top:20px}
+.eps{list-style:none;margin:32px 0 0;padding:0;counter-reset:e}
+.eps li{counter-increment:e;display:grid;grid-template-columns:36px 1fr;gap:4px 10px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(245,242,234,.14);font-family:var(--display);font-weight:600;font-size:18px;line-height:1.2}
+.eps li::before{content:counter(e,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--amber);font-weight:400}
+.eps a{color:var(--amber);text-decoration:none;display:inline-block;padding:12px 0}
+.eps a:hover{text-decoration:underline}
+.eps li em{grid-column:2;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);font-weight:400}
+.said{font-family:var(--display);font-weight:600;font-size:clamp(20px,5.4vw,26px);line-height:1.25;margin:28px 0 0;max-width:26ch;color:var(--frost)}
+.closer{padding:72px 0 44px}
+.closer p{font-family:var(--display);font-weight:800;font-size:clamp(30px,8vw,58px);line-height:1.08;max-width:20ch;margin:0}
+.closer p .ln span{color:var(--amber);display:block}
+.closer p .ln + .ln{margin-top:.5em}
+.pull .ln + .ln{margin-top:.4em;color:var(--amber)}
+.hero .sub{font-size:19px;color:var(--frost);max-width:none;margin:20px 0 0}
+.hero .btns{display:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;
+  padding:14px 18px;min-height:48px;display:inline-flex;align-items:center;font-weight:500}
+.btn.solid{background:var(--amber);color:var(--midnight)}
+.btn.line{border:1px solid rgba(245,242,234,.4)}
+
+/* live numbers */
+.live{background:var(--deep)}
+.nums{display:grid;gap:1px;background:rgba(245,242,234,.14);margin-top:32px;border:1px solid rgba(245,242,234,.14)}
+.num{background:var(--deep);padding:22px 20px;display:flex;justify-content:space-between;align-items:baseline}
+.num .v{font-family:var(--mono);font-size:44px;font-weight:500;line-height:1}
+.num .v small{font-size:18px;color:var(--steel);margin-left:2px}
+.num.diff .v{color:var(--amber)}
+.tag{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--midnight);background:var(--steel);padding:4px 8px}
+.pulse::before{content:"";display:inline-block;width:8px;height:8px;background:var(--amber);margin-right:10px;
+  animation:p 2.4s ease-in-out infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.25}}
+.spark{margin-top:20px;border:1px solid rgba(245,242,234,.14);padding:12px;background:var(--deep)}
+.spark svg{width:100%;height:80px;display:block}
+
+
+/* live lab readings (ported from the homepage) */
+:root{--cold:#7EC3E6;--panel:rgba(245,242,234,.04);--panel2:rgba(245,242,234,.07);--hair:rgba(245,242,234,.18);--hair2:rgba(245,242,234,.12)}
+.lb-live{
+  display:inline-flex;align-items:center;gap:calc(var(--u)*1.5);
+  font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);
+}
+.lb-live .lb-dot{width:8px;height:8px;background:var(--amber);flex:none;animation:pulse 2.4s ease-in-out infinite}
+.lb-live b{color:var(--amber);font-weight:600}
+.lb-live.stale .lb-dot{background:var(--steel);animation:none}
+.lb-live.stale b{color:var(--steel)}
+/* readings grid */
+.lb-grid{
+  display:grid;gap:calc(var(--u)*2);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:calc(var(--u)*4);
+}
+.lb-card{
+  background:var(--panel);border:1px solid var(--hair2);
+  padding:calc(var(--u)*2.5) calc(var(--u)*2.5) calc(var(--u)*2.75);
+  min-width:0;
+}
+.lb-card.lb-out{grid-column:1 / -1;display:flex;align-items:baseline;justify-content:space-between;gap:calc(var(--u)*3)}
+.lb-k{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.lb-k.lb-sub{text-transform:none;letter-spacing:.04em;margin-top:6px;font-size:12px}
+.lb-num{font-family:var(--display);font-stretch:68%;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.lb-num small{font-weight:500;margin-left:3px}
+.lb-out .lb-num{font-size:clamp(44px,5vw,64px);color:var(--cold)}
+.lb-out .lb-num small{font-size:.38em}
+
+.lb-wh{display:flex;justify-content:space-between;align-items:baseline;gap:calc(var(--u)*2);margin-bottom:calc(var(--u)*1.5)}
+.lb-wh h3{white-space:nowrap;font-stretch:72%;font-weight:800;font-size:clamp(22px,2.4vw,30px);letter-spacing:.02em;text-transform:uppercase}
+.lb-wh span{max-width:48%;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);text-align:right}
+.lb-wall .lb-hero2{display:flex;flex-direction:column;gap:calc(var(--u)*1.75)}
+.lb-big{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:calc(var(--u)*2)}
+.lb-big .lb-k{flex-basis:100%}
+.lb-key{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-top:6px;display:flex;gap:6px 14px;flex-wrap:wrap}
+.lb-key b{color:var(--ice);font-weight:500}
+.lb-big .lb-num{font-size:clamp(52px,5.6vw,72px);color:var(--amber);font-weight:800;font-stretch:66%}
+.lb-big .lb-num small{font-size:.34em;font-weight:600}
+.lb-big .lb-s{font-size:13px;color:var(--frost);margin-top:6px}
+.lb-wall svg{width:100%;height:auto}
+.lb-bar{margin-top:calc(var(--u)*1.75)}
+.lb-bar svg{width:100%;height:auto}
+.lb-bar .lb-lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--steel);margin-top:6px}
+.lb-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--u);margin-top:calc(var(--u)*1.75)}
+.lb-st{background:var(--panel2);padding:10px 10px 9px}
+.lb-st .lb-k{font-size:12px;letter-spacing:.1em;line-height:1.3}
+.lb-st .lb-num{font-size:26px;font-stretch:75%;margin-top:4px}
+.lb-st .lb-num small{font-size:13px}
+.lb-vnote{font-size:12px;line-height:1.45;color:var(--steel);margin:calc(var(--u)*1.25) 0 0}
+.lb-vnote b{color:var(--ice);font-weight:500}
+
+.lb-cams{grid-column:1 / -1;display:none}
+.lb-cams.on{display:block}
+.lb-cams h3{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin:0 0 calc(var(--u)*1.5)}
+.lb-cams .lb-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2)}
+.lb-cams .lb-cam{min-width:0}
+.lb-cams .lb-cam .lb-k{margin-bottom:6px}
+.lb-cams .lb-vid{position:relative;aspect-ratio:16/9;background:var(--panel2);border:1px solid var(--hair2)}
+.lb-cams .lb-vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lb-cams .lb-hours{font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:calc(var(--u)*1.25)}
+.lb-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.lb-cams .lb-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+.lb-ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:12px;text-align:center;font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.04em;color:var(--frost);background:rgba(14,19,48,.78)}
+.lb-vid[data-state=playing] .lb-ov{display:none}
+.lb-msg:empty{display:none}
+.lb-go{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:0;background:var(--amber);color:var(--midnight);font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.lb-go[hidden]{display:none}
+.lb-go:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+@media (max-width:720px){.lb-cams .lb-pair{grid-template-columns:1fr}}
+.lb-chart{grid-column:1 / -1}
+.lb-chart h3{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin:0 0 calc(var(--u)*1.5)}
+.lb-chart svg{width:100%;height:auto}
+.lb-legend{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.5) calc(var(--u)*2.5);margin-top:calc(var(--u)*1.5);font-family:var(--mono);font-size:12px;color:var(--frost)}
+.lb-legend i{display:inline-block;width:14px;height:3px;margin-right:6px;vertical-align:3px}
+.lb-aktime{font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:4px;text-align:right}
+
+.lb-lab-foot{
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:calc(var(--u)*1.5) calc(var(--u)*3);
+  margin-top:calc(var(--u)*3);
+}
+.lb-note{font-family:var(--mono);font-size:12px;line-height:1.65;color:var(--steel);max-width:62ch;margin:0}
+a.lb-full{display:inline-flex;align-items:center;min-height:44px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);text-decoration:none;white-space:nowrap}
+a.lb-full:hover{text-decoration:underline}
+.lb-unavail{font-family:var(--mono);font-size:12px;color:var(--steel);padding:calc(var(--u)*3) 0}
+
+
+#live .lb-grid{margin-top:16px}
+@media (max-width:719px){#live .lb-grid{grid-template-columns:1fr}}
+#live .lb-num{font-family:var(--display)}
+#live .lb-note{text-transform:none;letter-spacing:0;font-size:12px;line-height:1.65;margin:0}
+
+/* problem figure */
+.fig{margin:36px 0 0}
+.fig img{border:1px solid rgba(245,242,234,.14)}
+.fig figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--steel);margin-top:12px;text-transform:uppercase}
+
+/* qualified list */
+ol.tests{list-style:none;padding:0;margin:32px 0 0;counter-reset:t}
+ol.tests li{counter-increment:t;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:20px 0;
+  border-top:1px solid rgba(245,242,234,.14)}
+ol.tests li::before{content:counter(t,decimal-leading-zero);font-family:var(--mono);color:var(--amber);font-size:14px;padding-top:3px}
+ol.tests li b{font-family:var(--display);font-weight:800;font-size:20px;display:block}
+ol.tests li span{color:#B4C0D0;font-size:16px}
+.hold{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);border:1px dashed var(--amber);padding:4px 8px;background:transparent}
+ol.tests li span.hold{color:var(--amber);font-size:12px}
+.frame .hold{color:var(--slate);border-color:var(--slate)}
+ol.tests.plain li{grid-template-columns:1fr}
+ol.tests.plain li::before{content:none}
+ol.tests li.dim{opacity:1}
+ol.tests.audience li b{font-size:26px;line-height:1.1;margin-bottom:8px}
+.pull{font-family:var(--display);font-weight:800;font-size:clamp(26px,7vw,40px);line-height:1.1;margin-top:32px;max-width:20ch}
+
+/* frame */
+.frame{background:var(--ice);color:var(--midnight)}
+.frame .k{color:var(--slate)}
+.frame p.lede{color:#3a4560}
+.frame figure{margin:40px 0 0;background:#fff;padding:32px 24px;border:1px solid #d5d9e0}
+.frame figure img{margin:0 auto;max-height:none;width:100%;height:auto}
+.renders{display:grid;gap:20px}
+.renders figure{margin:0}
+.renders img{mix-blend-mode:multiply}
+.frame figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#59627a;margin-top:20px;
+  display:flex;flex-direction:column;gap:4px}
+.frame .pend{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:20px 0 28px;color:var(--slate)}
+section.frame + section{border-top:none}
+section + section.frame{border-top:none}
+
+/* two-col photo cards */
+.cards{display:grid;gap:20px;margin-top:36px}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid rgba(245,242,234,.14)}
+.card p{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1.5;color:var(--steel);margin:12px 0 0}
+
+/* who */
+.who{display:grid;gap:20px}
+.portrait{width:100%;max-width:none;aspect-ratio:1/1;object-fit:cover}
+.role{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--steel);margin:14px 0 0}
+.people{display:grid;gap:1px;background:rgba(245,242,234,.14);border:1px solid rgba(245,242,234,.14);margin-top:32px}
+.person{background:var(--midnight);padding:20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.person b{font-family:var(--display);font-weight:800;font-size:20px}
+.person span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel)}
+.phimg{width:56px;height:56px;object-fit:cover;flex:none}
+.ph{width:56px;height:56px;border:1px dashed var(--steel);flex:none;display:grid;place-items:center;
+  font-family:var(--mono);font-size:9px;color:var(--steel);text-align:center}
+
+.credit{position:absolute;right:var(--gut);bottom:10px;z-index:2;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ice);background:rgba(20,27,60,.78);padding:3px 8px}
+.team{display:grid;gap:40px}
+.who .portrait{object-position:50% 18%;max-width:180px}
+.qmark{width:min(200px,56%);height:auto;border-radius:50%;margin:0 0 28px}
+.cmp{margin:16px 0 0;padding-left:20px;color:var(--frost);font-size:16px;line-height:1.5}
+.cmp li{margin-top:8px}
+.lb-c{grid-column:1 / -1}
+.lb-c .lb-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.lb-c .lb-st{min-width:0;padding:10px 6px 9px}
+.lb-c .lb-st .lb-num{font-size:clamp(17px,5.4vw,34px);white-space:nowrap}
+.lb-c .lb-st .lb-num small{font-size:.5em}
+
+
+/* fold long blocks on phones, zoom photos */
+.more-btn{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;padding:0 16px;background:transparent;color:var(--amber);border:1px solid var(--amber);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.bio.clamp{max-height:9em;overflow:hidden;position:relative}
+.bio.clamp::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(rgba(20,27,60,0),var(--midnight))}
+.bio.clamp.open{max-height:none}
+.bio.clamp.open::after{display:none}
+.zoomable{cursor:zoom-in}
+dialog#zoom{border:0;padding:0;background:transparent;width:100%;max-width:100vw;height:100%;max-height:100vh;color:var(--ice)}
+dialog#zoom::backdrop{background:rgba(14,19,48,.95)}
+dialog#zoom .zwrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:56px 16px 20px;gap:12px}
+dialog#zoom img{max-width:100%;max-height:calc(100% - 70px);width:auto;height:auto;object-fit:contain;border:0}
+dialog#zoom p{margin:0;max-width:60ch;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--frost);text-align:center}
+dialog#zoom .zx{position:absolute;top:8px;right:8px;width:48px;height:48px;background:transparent;color:var(--ice);border:1px solid rgba(245,242,234,.4);font-size:26px;line-height:1;cursor:pointer}
+@media (max-width:719px){
+  #about .split > div + div{margin-top:40px}
+  .fig img{aspect-ratio:4/3;object-fit:cover}
+  p.lede{line-height:1.4}
+}
+
+
+/* section menu */
+section[id]{scroll-margin-top:60px}
+.barR{display:flex;align-items:center;gap:10px}
+.menubtn{display:inline-flex;align-items:center;justify-content:center;color:var(--ice);background:transparent;border:1px solid rgba(245,242,234,.4);width:48px;min-height:44px;padding:0;cursor:pointer}
+.menubtn .hx{display:none}
+.menubtn[aria-expanded="true"] .hx{display:inline}
+.menubtn[aria-expanded="true"] .hb{display:none}
+.menu{position:absolute;left:0;right:0;top:56px;display:none;background:rgba(14,19,48,.98);border-bottom:1px solid rgba(245,242,234,.18);padding:6px var(--gut) 14px}
+.menu.open{display:block}
+.menu a{display:flex;align-items:center;min-height:48px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ice);border-top:1px solid rgba(245,242,234,.12)}
+.menu a:first-child{border-top:none}
+.menu a:hover{color:var(--amber)}
+@media (min-width:720px){
+  .menu{left:auto;right:max(var(--gut),calc((100vw - 1100px)/2 + var(--gut)));width:320px;border:1px solid rgba(245,242,234,.18);border-top:none;padding:6px 20px 14px}
+}
+
+.nm{font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+p.lead{font-family:var(--display);font-weight:800;letter-spacing:-.01em;font-size:clamp(24px,6.4vw,32px);line-height:1.15;color:var(--amber);margin:24px 0 0;max-width:20ch}
+/* contact + footer */
+form{display:grid;gap:12px;margin-top:28px;max-width:420px}
+input{font:inherit;background:var(--deep);color:var(--ice);border:1px solid rgba(245,242,234,.3);padding:14px;min-height:48px;border-radius:0}
+input::placeholder{color:var(--steel)}
+footer{padding:36px 0 120px;border-top:1px solid rgba(245,242,234,.12);font-family:var(--mono);font-size:12px;line-height:1.9;color:var(--steel)}
+footer p{max-width:60ch;margin:0 0 16px;font-family:var(--body);font-size:13px;line-height:1.6}
+footer a{color:var(--amber);text-decoration:none;display:inline-block;padding:12px 0}
+
+/* sticky bottom call (phone only) */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;background:rgba(20,27,60,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(245,242,234,.18)}
+.dock a{flex:1;text-align:center;padding:16px;font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--amber);text-decoration:none;font-weight:500;min-height:48px}
+.dock a + a{border-left:1px solid rgba(245,242,234,.18)}
+
+.mockflag{position:fixed;top:60px;right:8px;z-index:11;font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--steel);color:var(--midnight);padding:3px 7px}
+
+/* desktop: same page, wider */
+@media (min-width:720px){
+  .four{grid-template-columns:repeat(2,1fr)}
+  :root{--gut:40px}
+  body{font-size:18px}
+  section{padding:88px 0}
+  .dock{display:none}
+  .hero .btns{display:flex}
+  .hero h1.quote .b{font-size:clamp(40px,5.4vw,92px)}
+  .hero h1.quote .a{font-size:clamp(20px,2.6vw,34px)}
+  .hero .copy{padding-right:24px}
+  footer{padding-bottom:48px}
+  .hero{min-height:min(calc(100vh - 56px),760px);flex-direction:row;align-items:stretch}
+  .hero .photo{height:auto;order:2;flex:1.1;min-height:0}
+  .hero .photo::after{background:linear-gradient(90deg,var(--midnight) 0%,rgba(20,27,60,.1) 55%)}
+  .hero .copy{order:1;flex:1;padding:0 40px 0 max(40px,calc((100vw - 1100px)/2 + 40px));
+    display:flex;flex-direction:column;justify-content:center;max-width:none;width:auto}
+  .num{flex-direction:column;gap:12px;align-items:flex-start;padding:28px}
+  .cards{grid-template-columns:1fr 1fr}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+  .frame figure{margin-top:0}
+  .who{grid-template-columns:minmax(200px,300px) 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+  .who .portrait{max-width:none}
+}
+.skip{position:absolute;left:8px;top:-60px;z-index:20;background:var(--amber);color:var(--midnight);font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 16px;text-decoration:none;font-weight:500}
+.skip:focus{top:8px}
+main:focus{outline:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="bar"><div class="wrap">
+  <img src="../img/mark-cream.png" alt="N50">
+  <nav id="menu" class="menu" aria-label="Page sections">
+    <a href="#about">About</a>
+    <a href="#how">Window performance</a>
+    <a href="#live">Test data</a>
+    <a href="#qualified">N50 Qualified</a>
+    <a href="#engineering">Engineering</a>
+    <a href="#fairbanks">Why Fairbanks</a>
+    <a href="#learn">Learn</a>
+    <a href="#team">Our team</a>
+  </nav>
+  <div class="barR">
+    <a class="call" href="mailto:info@north50buildingsystems.com">Contact</a>
+    <button type="button" class="menubtn" aria-expanded="false" aria-controls="menu" aria-label="Menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><g class="hb"><path d="M3 6h18M3 12h18M3 18h18"/></g><g class="hx"><path d="M5 5l14 14M19 5L5 19"/></g></svg></button>
+  </div>
+</div></header>
+<main id="main" tabindex="-1">
+
+<!-- 1 HERO -->
+<section class="hero">
+  <div class="photo"><img src="../img/lab-windows.jpg" alt="Lab windows at dusk with temperature sensors on the glass"><span class="credit">Photo by Kaitlin Wilson</span></div>
+  <div class="copy">
+    <div class="label">Fairbanks, Alaska<span class="sep"> · </span><span class="deg">64.8 degrees north</span></div>
+    <div class="k" style="margin:14px 0 0"><span class="nb">N50 Qualified</span></div>
+    <h1 class="quote"><span class="a">We do not seek what can survive north of the&nbsp;50th&nbsp;parallel.</span><span class="b"><i>We seek</i><i>what thrives.</i></span></h1>
+    <div class="btns">
+      <a class="btn solid" href="#live">View test data</a>
+      <a class="btn line" href="#qualified">What N50 Qualified means</a>
+    </div>
+  </div>
+</section>
+
+<!-- 1b ABOUT (Dan Keck final copy) -->
+<section id="about">
+  <div class="wrap split">
+    <div>
+      <div class="k">Building systems tested in Alaska</div>
+      <h2>Who we are and what we&nbsp;do.</h2>
+      <p class="lede">North 50 develops and tests complete building systems for demanding conditions. We use field measurements and engineering analysis to evaluate how their components perform together. Our current work focuses on complete window systems tested through Interior Alaska winters.</p>
+      <p class="lede">Based in Fairbanks, Alaska, North 50 takes its name from the 50th parallel. We study installed building systems under actual conditions to understand how their components work together.</p>
+      <p class="lede">For windows, that means evaluating the glass, frame, cladding, gaskets, seals, and installation as one system. We compare published performance data with real-world measurements from installed assemblies.</p>
+      <div class="k" style="margin-top:40px">Our assurance mission</div>
+      <p class="lede" style="margin-top:0">To develop, test, qualify, and help bring dependable building systems to consumers.</p>
+      <div class="k" style="margin-top:40px">Our approach</div>
+      <p class="lede" style="margin-top:0">We define the system being evaluated, measure its performance, and document the results and their limits.</p>
+    </div>
+    <div>
+      <div class="k">How we test</div>
+      <ol class="tests plain">
+        <li><div><b>Install complete systems.</b><span>We install window systems in instrumented test walls at our lab at 301 Henderson Road North in Ester, near Fairbanks.</span></div></li>
+        <li><div><b>Measure through the winter.</b><span>Sensors record glass and air temperatures as outdoor conditions change.</span></div></li>
+        <li><div><b>Evaluate the components together.</b><span>We use the measurements to examine how each part contributes to the performance of the complete window.</span></div></li>
+      </ol>
+      <div class="k" style="margin-top:40px">The science behind N50 Qualified</div>
+      <p class="lede" style="margin-top:0">North 50 combines measurements from installed test systems with engineering analysis and algorithms to evaluate the thermal performance of complete assemblies.</p>
+      <p class="lede">We analyze how the components interact under defined conditions to assess efficiency and identify where improvements are needed.</p>
+      <p class="lede">We use the results to determine whether a specific configuration meets North 50&rsquo;s documented requirements for its intended use, and which parts work best together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 WINDOW PERFORMANCE -->
+<section id="how">
+  <div class="wrap split">
+    <div>
+      <div class="k">Window performance</div>
+      <h2>Why window performance matters.</h2>
+      <p class="lede">Windows bring daylight and views into a building, but they also transfer heat. In cold climates, that can increase heating demand and make the space near a window uncomfortable.</p>
+      <p class="lede">Vacuum insulated glass greatly reduces heat transfer through the glazing. The performance of the complete window also depends on the frame, cladding, edges, seals, and installation.</p>
+      <div class="k" style="margin-top:40px">What vacuum glass does</div>
+      <p class="lede" style="margin-top:0">Vacuum insulated glass, or VIG, uses two panes separated by a narrow vacuum gap. The vacuum and a low-emissivity coating work together to reduce heat transfer.</p>
+      <p class="lede">This allows high insulation performance in a thin glass unit. Whether it can be used in an existing frame depends on the specific glass unit, frame, and installation details.</p>
+      <figure class="fig">
+        <img src="../img/thermal-edges.jpg" alt="Thermal camera image of freshly sealed glass units with warm edges">
+        <figcaption>Thermal camera, freshly sealed glass units, 18 Sep &middot; Thermal image by Kevin Tennant</figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="k">How vacuum glass works</div>
+      <h2 style="font-size:clamp(26px,6vw,36px)">Four parts work&nbsp;together.</h2>
+      <ol class="tests">
+        <li><div><b>The vacuum.</b><span>The vacuum gap greatly reduces heat transfer by gas conduction and convection between the panes.</span></div></li>
+        <li><div><b>The coating.</b><span>A low-emissivity coating, often called low-e, reduces radiant heat transfer across the gap.</span></div></li>
+        <li><div><b>The support pillars.</b><span>Tiny pillars keep the panes apart under atmospheric pressure.</span></div></li>
+        <li><div><b>The edge seal.</b><span>An airtight seal around the perimeter maintains the vacuum. The pillars and edge seal still provide paths for some heat transfer.</span></div></li>
+      </ol>
+      <figure class="fig" style="margin-top:28px">
+        <img src="../img/pillar-coin.jpg" style="object-position:50% 38%" alt="A vacuum glass support pillar resting on a coin, for scale">
+        <figcaption>A support pillar on a coin, for scale &middot; Photo by Kevin Tennant</figcaption>
+      </figure>
+      <div class="k" style="margin-top:40px">What this can mean for a building</div>
+      <p class="lede" style="margin-top:0">An effective window system can reduce heating demand and keep the indoor glass surface warmer in winter. Warmer glass improves comfort near the window and can reduce the risk of indoor condensation or frost.</p>
+      <p class="lede">Sound insulation depends on the complete glass and frame assembly and should be assessed using the product&rsquo;s acoustic rating.</p>
+      <div class="k" style="margin-top:40px">Understanding the ratings</div>
+      <p class="lede" style="margin-top:0">R-value describes resistance to heat flow: higher is better. U-factor describes heat transfer: lower is better.</p>
+      <p class="lede">A center-of-glass value describes only the middle of the glazing. A whole-window rating also accounts for the frame and edges. When comparing ratings, check that they describe the same part of the assembly and use the same units and test basis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 LIVE -->
+<section class="live" id="live">
+  <div class="wrap">
+    <div class="k pulse">Live testing</div>
+    <h2>See the test&nbsp;data.</h2>
+    <p class="lede">Follow the latest readings from our L, V, and C Series tests. The L and V Series displays show glass surface temperatures alongside indoor and outdoor air temperatures measured at the lab.</p>
+    <p class="lede">For each of those series, the main glass temperature averages the available readings at the center of the indoor glass surfaces. Individual readings show the indoor glass center, outdoor glass center, and indoor glass edge.</p>
+    <div style="margin-top:28px"><div class="lb-live stale" id="lbLive"><span class="lb-dot"></span><span id="liveT">Loading readings</span></div></div>
+    <div class="lb-grid" style="margin-top:16px" id="grid">
+      <div class="lb-card lb-out">
+        <div><div class="lb-k">Outside air</div><div class="lb-k lb-sub">measured at the lab</div></div>
+        <div class="lb-num" id="outV">n/a</div>
+      </div>
+      <section class="lb-card lb-wall" id="wallA"></section>
+      <section class="lb-card lb-wall" id="wallB"></section>
+      <section class="lb-card lb-wall lb-c" id="wallC"></section>
+      <section class="lb-card lb-cams on" id="cams" aria-label="Live cameras">
+        <h3>Live cameras</h3>
+        <div class="lb-pair" id="camPair"></div>
+        <p class="lb-hours" id="camHours"></p>
+      </section>
+      <section class="lb-card lb-chart" id="chartCard">
+        <h3 id="chT">The last 24 hours</h3>
+        <div id="chart"></div>
+        <div class="lb-legend"><span><i style="background:var(--cold)"></i>Outside air</span><span><i style="background:var(--amber)"></i>V Series glass</span><span><i style="background:var(--ice)"></i>L Series glass</span><span><i style="background:var(--steel)"></i>Room air</span></div>
+      </section>
+    </div>
+
+    <div class="lb-lab-foot">
+      <p class="lb-note">Measurements are posted every 15 minutes. All temperatures are in &deg;F, and times are shown in Alaska time. These readings show conditions during the test. Temperature readings alone do not establish a whole-window insulation rating.</p>
+      <p class="lb-note"><b>V2 note.</b> V2 uses an installation that differs from the manufacturer&rsquo;s guidance so its performance can be compared with V1 and V3.</p>
+      <a class="lb-full" href="https://feldtdesign-ship-it.github.io/n50-lab-live/">Open the full lab dashboard &rarr;</a>
+    </div>
+
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><img src="../img/ir-lseries-2.jpg" alt="Thermal camera view of the L Series wall from inside the lab" style="aspect-ratio:4/3"><p>L Series wall from inside, thermal camera, 17 Oct &middot; Thermal image by Kevin Tennant</p></div>
+      <div class="card"><img src="../img/lab-wall-outside.jpg" alt="The large test window wall seen from outside, reflecting autumn trees and the sky" style="aspect-ratio:4/3"><p>The same kind of wall from outside, with the sky and trees in the glass &middot; Photo by Kaitlin Wilson</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 QUALIFIED -->
+<section id="qualified">
+  <div class="wrap split">
+    <div>
+      <div class="k">N50 Qualified</div>
+      <img class="qmark" src="../img/n50qualified_circle.png" alt="N50 Qualified mark">
+      <h2>What N50 Qualified&nbsp;means.</h2>
+      <p class="lede">N50 Qualified is the qualification mark owned by North 50 Building Systems. It identifies a complete assembly that has met our documented requirements for its intended use.</p>
+      <p class="lede">The qualification covers a specific configuration: the combination of components and installation details evaluated together.</p>
+    </div>
+    <div>
+      <p class="lede" style="margin-top:0">Each qualification record identifies the configuration and intended use, along with the requirements, test methods, analysis, results, and limits.</p>
+      <p class="lede">We apply the same requirements to systems being evaluated for the same intended use, including our own technologies. Fees cover testing and documentation. Qualification is earned by meeting the requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4b WHO WE SERVE -->
+<section id="for">
+  <div class="wrap split">
+    <div>
+      <div class="k">Who we serve</div>
+      <h2>Who we&nbsp;serve.</h2>
+    </div>
+    <div>
+      <ol class="tests plain audience">
+        <li><div><b>Homeowners and the public.</b><span>Clear information about window performance to help people choose systems suited to their homes.</span></div></li>
+        <li><div><b>Architects, engineers, and builders.</b><span>Documented results to support system selection, specification, and installation.</span></div></li>
+        <li><div><b>Manufacturers.</b><span>Testing in actual conditions and a documented basis for qualification.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 5 ENGINEERING -->
+<section class="frame" id="engineering">
+  <div class="wrap split">
+    <div>
+      <div class="k">Engineering and development</div>
+      <h2>Frames developed for vacuum insulated&nbsp;glass.</h2>
+      <p class="lede">North 50 has already developed at least three frame profiles specifically for use with vacuum insulated glass, or VIG. We use pultruded and extruded profiles in a range of materials.</p>
+      <p class="lede">We also clad frames with high-performance organic materials, including super-high-density cork.</p>
+      <p class="lede">We evaluate the profiles and cladding as part of a complete assembly, together with the glass, gaskets, seals, and installation. Our development priorities include thermal performance and practical requirements for manufacturing, installation, and maintenance.</p>
+      <p class="lede">N50 qualification applies to the defined assembly and its intended use, with the components, test results, and limits documented.</p>
+      <div class="k" style="margin-top:48px">EdgeRay &middot; In development</div>
+      <p class="lede" style="margin-top:0">EdgeRay is a North 50 technology in development that uses infrared energy to warm the edge of a window assembly and deliver that energy inside the frame. Its goal is to improve comfort near windows and help manage cold glass edges.</p>
+      <p class="lede">Development work examines how the infrared source, receiver, glass, and frame perform together under actual conditions.</p>
+      <p class="lede">Any N50 qualification would apply to a specific configuration and intended use. North 50&rsquo;s own technologies are evaluated against the same requirements as other systems being considered for that use.</p>
+    </div>
+    <div class="renders">
+      <figure>
+        <img src="../img/frame-hero.jpg" alt="Three-quarter render of a frame holding a vacuum glass pane, with a small cutaway sample beside it">
+        <figcaption><span>Concept mock-up</span><span>Frame holding vacuum glass</span></figcaption>
+      </figure>
+      <figure>
+        <img src="../img/frame-assembly.jpg" alt="Three-quarter cutaway of the frame section showing insulated cavities around two panes of glass">
+        <figcaption><span>Concept mock-up</span><span>Cutaway: insulated cavities at the glass edge</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6 FAIRBANKS -->
+<section id="fairbanks">
+  <div class="wrap">
+    <div class="k">Why Fairbanks</div>
+    <h2>Why we test in&nbsp;Fairbanks.</h2>
+    <p class="lede">Interior Alaska provides long winters, deep cold, and changing outdoor conditions. That makes Fairbanks the most demanding place to study how installed building systems perform over time.</p>
+    <p class="lede">Field measurements add practical evidence to laboratory results. They help us understand how components behave together under actual operating conditions.</p>
+    <p class="lede">Insulation slows heat transfer in either direction, so it matters in both heating and cooling. Suitability for another climate also depends on factors such as solar exposure, moisture, and local building requirements.</p>
+    <figure class="fig">
+      <img src="../img/lab-aerial.jpg" alt="Aerial view of the lab building with its large window wall, set in autumn hills outside Fairbanks">
+      <figcaption>The lab in the autumn hills &middot; Photo by Kaitlin Wilson</figcaption>
+    </figure>
+    <div class="cards">
+      <div class="card"><img src="../img/ir-lseries-1.jpg" alt="Thermal camera view of the L Series test wall from inside the lab"><p>The L Series test wall from inside the lab, through a thermal camera &middot; Thermal image by Kevin Tennant</p></div>
+      <div class="card"><img src="../img/lab-dusk.jpg" alt="Outside of the lab at dusk with sensor wires on the glass" style="object-position:50% 55%"><p>The lab from outside, with sensor wires on the glass</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 LOCAL PRODUCTION -->
+<section id="local">
+  <div class="wrap">
+    <div class="k">Local production</div>
+    <h2>Building Alaska&rsquo;s supply&nbsp;network.</h2>
+    <p class="lede">Our goal is to expand local access to high-performance glazing by developing finishing, qualification, and distribution capacity in Fairbanks.</p>
+    <p class="lede">We aim to support Alaska&rsquo;s existing fabricators and installers with a dependable local supply network that helps address the challenges of freight and distance.</p>
+  </div>
+</section>
+
+<!-- 7c LEARN -->
+<section id="learn">
+  <div class="wrap">
+    <div class="k">Learn</div>
+    <h2>Learn about window performance.</h2>
+    <p class="lede">Kevin Tennant explains how windows transfer heat, how vacuum glass works, and what our testing is showing.</p>
+    <p class="lede">Listen to The Cold Envelope for practical discussions of glazing, insulation, and building performance.</p>
+    <ol class="eps">
+      <li><a href="https://open.spotify.com/show/7AONOCLEsjvClTYB1E3qdk">The Cold Envelope</a> <em>Podcast &middot; Listen now</em></li>
+      <li>The Impossible Vacuum <em>Upcoming topic</em></li>
+    </ol>
+    <div class="btns"><a class="btn solid" href="https://open.spotify.com/show/7AONOCLEsjvClTYB1E3qdk">Listen to The Cold Envelope</a></div>
+  </div>
+</section>
+
+<!-- 8 WHO -->
+<section id="team">
+  <div class="wrap">
+  <div class="k">Our team</div>
+  <div class="team">
+  <div class="who">
+    <img class="portrait" src="../img/dan-keck.jpg" alt="Dan Keck">
+    <div>
+      <h2>Dan Keck</h2>
+      <p class="role">Founder and Principal</p>
+<div class="bio">
+      <p class="lede">Dan develops businesses and projects that bring new technologies into practical use. He is the founder of North 50 Building Systems and North Star Grand Lodge. His work connects building innovation with project development and economic opportunity in Fairbanks.</p>
+</div>
+    </div>
+  </div>
+  <div class="who">
+    <img class="portrait" src="../img/jason-scharfstein.jpg" alt="Jason Scharfstein">
+    <div>
+      <h2>Jason Scharfstein</h2>
+      <p class="role">Vice President</p>
+<div class="bio">
+      <p class="lede">Jason&rsquo;s work focuses on materials, manufacturing, and glazing installation. He leads glass house prototype construction and glazing work, with experience developing rigging and installation methods for complex projects.</p>
+</div>
+    </div>
+  </div>
+  <div class="who">
+    <img class="portrait" src="../img/kevin-headshot.jpg" alt="Kevin Tennant">
+    <div>
+      <h2>Kevin Tennant</h2>
+      <p class="role">Vice President</p>
+<div class="bio">
+      <p class="lede">Kevin is a retired U.S. Air Force Senior Master Sergeant and founder and president of GDI Inc., which operates Glass Doctor of&nbsp;Fairbanks, Glass Doctor of the Mat&#8209;Su&nbsp;Valley, Mat&#8209;Su Insulated Glass, and Thermalite Glass&nbsp;Manufacturing.</p>
+      <p class="lede">He and Tamera started their windshield-repair business in 1998. His work has since expanded into residential, commercial, and industrial glazing, with a focus on systems suited to Alaska&rsquo;s climate.</p>
+</div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- 9 CONTACT -->
+<section id="join">
+  <div class="wrap" style="margin-top:72px">
+    <footer>
+      <b class="nm">North 50 Building Systems</b> · Fairbanks, Alaska<br>
+      <a href="mailto:info@north50buildingsystems.com">info@north50buildingsystems.com</a>
+    </footer>
+  </div>
+</section>
+
+</main>
+<nav class="dock" aria-label="Quick actions"><a href="mailto:info@north50buildingsystems.com">Contact us</a><a href="#live">Test data</a></nav>
+<script>
+// Live lab readings. Reads the newest numbers straight from the lab-data branch on GitHub.
+(function(){
+const SRC="https://raw.githubusercontent.com/feldtdesign-ship-it/n50-lab-live/lab-data/";
+const WALLS={A:{name:"V Series",tag:"3 panes",lites:["V1","V2","V3"]},B:{name:"L Series",tag:"6 panes · one frame",lites:["L1","L2","L3","L4","L5","L6"]}};
+const C={cold:"#7EC3E6",amber:"#F0B93F",ice:"#F5F2EA",steel:"#8A98AC",night:"#141B3C",grid:"rgba(245,242,234,.10)",frameFill:"#1E2A52"};
+const $=id=>document.getElementById(id);
+const f1=v=>v==null?"n/a":v.toFixed(1);
+const avg=a=>{a=a.filter(v=>typeof v==="number");return a.length?a.reduce((s,v)=>s+v,0)/a.length:null};
+function mix(t,lo,hi){const u=Math.max(0,Math.min(1,(t-lo)/((hi-lo)||1)));const c0=[126,195,230],c1=[240,185,63];return `rgb(${c0.map((x,i)=>Math.round(x+(c1[i]-x)*u)).join(",")})`}
+function wallStats(P,w){const L=WALLS[w].lites;const ei=L.map(l=>P[l+" ei"]).filter(v=>typeof v==="number");
+  return{room:P[w+":air in 1"],out:P[w+":air out 1"],glass:avg(L.map(l=>P[l+" ci"])),edge:ei.length?Math.min(...ei):null,ci:L.map(l=>P[l+" ci"]),ce:L.map(l=>P[l+" ce"]),ei:L.map(l=>P[l+" ei"])}}
+const MONO='font-family="IBM Plex Mono, ui-monospace, monospace"';
+function lite(x,y,w,h,name,ci,ce,ei,lo,hi){const fill=ci==null?C.frameFill:mix(ci,lo,hi), ink=ci==null?C.steel:C.night;
+  const row=(ky,label,v,big)=>`<text x="${x+7}" y="${ky}" ${MONO} font-size="7.5" letter-spacing=".08em" fill="${ink}" opacity=".75">${label}</text><text x="${x+w-7}" y="${ky}" text-anchor="end" ${MONO} font-size="${big?13:11.5}" font-weight="${big?700:500}" fill="${ink}">${v==null?"n/a":v.toFixed(1)}</text>`;
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"/>`+
+    `<text x="${x+7}" y="${y+12}" ${MONO} font-size="8.5" font-weight="600" fill="${ink}">${name}</text>`+
+    row(y+h*0.44,"IN",ci,true)+row(y+h*0.64,"OUT",ce,false)+row(y+h*0.84,"EDGE",ei,false)}
+function windows(w,s){const lo=s.out,hi=s.room;
+  if(w==="A"){let g="";s.ci.forEach((t,i)=>{const x=4+i*98;g+=lite(x,4,92,108,"V"+(i+1)+(i===1?"*":""),s.ci[i],s.ce[i],s.ei[i],lo,hi)+`<rect x="${x}" y="4" width="92" height="108" rx="2" fill="none" stroke="${C.ice}" stroke-width="3"/>`});return `<svg viewBox="0 0 300 116" aria-hidden="true">${g}</svg>`}
+  let g="";
+  for(let c=0;c<3;c++){const x=6+c*97.33; const top=2-c, bot=5-c;  // from inside: top row L3 L2 L1, bottom row L6 L5 L4. Lites fill the openings between frame and dividers.
+    g+=lite(x,6,93.33,84,"L"+(top+1),s.ci[top],s.ce[top],s.ei[top],lo,hi)+lite(x,94,93.33,90,"L"+(bot+1),s.ci[bot],s.ce[bot],s.ei[bot],lo,hi)}
+  g+=`<rect x="4" y="4" width="292" height="182" rx="2" fill="none" stroke="${C.ice}" stroke-width="4"/><line x1="4" y1="92" x2="296" y2="92" stroke="${C.ice}" stroke-width="4"/><line x1="101.33" y1="4" x2="101.33" y2="186" stroke="${C.ice}" stroke-width="4"/><line x1="198.67" y1="4" x2="198.67" y2="186" stroke="${C.ice}" stroke-width="4"/>`;
+  return `<svg viewBox="0 0 300 190" aria-hidden="true">${g}</svg>`}
+function thermoBar(s){const lo=Math.min(s.out,s.glass)-2,hi=Math.max(s.room,s.glass)+2,X=v=>8+(v-lo)/(hi-lo)*304;
+  return `<svg viewBox="0 0 320 34" aria-hidden="true"><defs><linearGradient id="g${s.id}" x1="0" x2="1"><stop offset="0" stop-color="${C.cold}"/><stop offset="1" stop-color="${C.amber}"/></linearGradient></defs>
+  <rect x="8" y="12" width="304" height="8" fill="url(#g${s.id})" opacity=".9"/>
+  <circle cx="${X(s.out)}" cy="16" r="5" fill="${C.night}" stroke="${C.cold}" stroke-width="2"/><circle cx="${X(s.room)}" cy="16" r="5" fill="${C.night}" stroke="${C.steel}" stroke-width="2"/>
+  <path d="M${X(s.glass)} 6 l6 -6 h-12z" fill="${C.amber}"/><rect x="${X(s.glass)-1.5}" y="6" width="3" height="22" fill="${C.amber}"/></svg>`}
+function renderWall(w,P){const s=wallStats(P,w),el=$("wall"+w);s.id=w;
+  if(s.glass==null||s.out==null||s.room==null){el.innerHTML=`<div class="lb-wh"><h3>${WALLS[w].name}</h3><span>${WALLS[w].tag}</span></div><div class="lb-unavail">Readings unavailable right now</div>`;return}
+  const diff=s.room-s.out;
+  el.innerHTML=`<div class="lb-wh"><h3>${WALLS[w].name}</h3><span>${WALLS[w].tag}</span></div>
+  <div class="lb-hero2"><div class="lb-big"><div class="lb-k">Inside glass</div><div class="lb-num">${f1(s.glass)}<small>F</small></div><div class="lb-s">${f1(s.glass-s.out)} F warmer than outside</div></div><div>${windows(w,s)}<div class="lb-key"><span><b>In</b> inside center</span><span><b>Out</b> outside center</span><span><b>Edge</b> inside edge</span><span>F per pane</span></div></div></div>
+  <div class="lb-bar">${thermoBar(s)}<div class="lb-lbl"><span>OUTSIDE ${f1(s.out)}</span><span style="color:var(--amber)">GLASS ${f1(s.glass)}</span><span>ROOM ${f1(s.room)}</span></div></div>
+  <div class="lb-stats"><div class="lb-st"><div class="lb-k">Coldest<br>edge</div><div class="lb-num">${f1(s.edge)}<small>F</small></div></div>
+  <div class="lb-st"><div class="lb-k">Room to<br>outside</div><div class="lb-num">${f1(diff)}<small>F</small></div></div></div>${w==="A"?`<p class="lb-vnote">*V2 is installed counter to manufacturer guidance as a control to V1 and V3.</p>`:""}`}
+function renderC(P){const el=$("wallC"),v=["C1","C2","C3"].map(k=>P[k]),head=`<div class="lb-wh"><h3>C Series</h3><span>3 readings</span></div>`;
+  if(v.every(x=>typeof x!=="number")){el.innerHTML=head+`<div class="lb-unavail">Readings unavailable right now</div>`;return}
+  el.innerHTML=head+`<div class="lb-stats">${v.map((x,i)=>`<div class="lb-st"><div class="lb-k">C${i+1}</div><div class="lb-num">${typeof x==="number"?f1(x)+"<small>F</small>":"n/a"}</div></div>`).join("")}</div>`}
+function chart(rows){const now=Date.now(),from=now-24*3600e3;let R=rows.filter(r=>new Date(r.t)>=from);if(R.length<2)R=rows.slice(-96);
+  $("chT").textContent=(R.length&&new Date(R[0].t)<now-20*3600e3)?"The last 24 hours":"Since readings began";
+  const ser=[[C.cold,p=>avg([p["A:air out 1"],p["B:air out 1"]])],[C.amber,p=>avg(WALLS.A.lites.map(l=>p[l+" ci"]))],[C.ice,p=>avg(WALLS.B.lites.map(l=>p[l+" ci"]))],[C.steel,p=>avg([p["A:air in 1"],p["B:air in 1"]])]];
+  const pts=R.map(r=>({t:new Date(r.t).getTime(),v:ser.map(([c,fn])=>fn(r.p))}));const vals=pts.flatMap(p=>p.v).filter(v=>v!=null);if(!vals.length)return;
+  let lo=Math.floor(Math.min(...vals)/5)*5,hi=Math.ceil(Math.max(...vals)/5)*5;const t0=pts[0].t,t1=Math.max(pts[pts.length-1].t,t0+3600e3);
+  const wide=window.innerWidth>720,W=wide?720:340,H=wide?220:170,l=30,r=8,tp=8,b=22,X=t=>l+(t-t0)/(t1-t0)*(W-l-r),Y=v=>tp+(hi-v)/(hi-lo||1)*(H-tp-b);
+  let g="";for(let v=lo;v<=hi;v+=(hi-lo>40?20:10)){g+=`<line x1="${l}" x2="${W-r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${C.grid}"/><text x="${l-6}" y="${Y(v)+3}" text-anchor="end" ${MONO} font-size="9" fill="${C.steel}">${v}</text>`}
+  const fmt=t=>new Date(t).toLocaleTimeString("en-US",{timeZone:"America/Anchorage",hour:"numeric"}).replace(" ","").toLowerCase();
+  const nT=wide?6:3;for(let i=0;i<=nT;i++){const t=t0+(t1-t0)*i/nT;g+=`<text x="${X(t)}" y="${H-6}" text-anchor="${i==0?"start":i==nT?"end":"middle"}" ${MONO} font-size="9" fill="${C.steel}">${fmt(t)}</text>`}
+  ser.forEach(([c],k)=>{const d=pts.filter(p=>p.v[k]!=null).map((p,i)=>(i?"L":"M")+X(p.t).toFixed(1)+" "+Y(p.v[k]).toFixed(1)).join(" ");g+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="${k==3?1.4:2.2}" ${k==3?'stroke-dasharray="4 3"':""} stroke-linejoin="round" stroke-linecap="round"/>`;const last=pts.filter(p=>p.v[k]!=null).pop();if(last)g+=`<circle cx="${X(last.t)}" cy="${Y(last.v[k])}" r="3" fill="${c}"/>`});
+  $("chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Temperature chart">${g}</svg><div class="lb-aktime">Alaska time</div>`}
+let lastRows=null;
+async function load(){const q="?t="+Math.floor(Date.now()/60000);
+  try{const L=await (await fetch(SRC+"latest.json"+q,{cache:"no-store"})).json();const P={};for(const[k,v]of Object.entries(L.probes))P[k]=v.value_f;
+    const age=(Date.now()-new Date(L.time_utc))/60000,ak=new Date(L.time_utc).toLocaleTimeString("en-US",{timeZone:"America/Anchorage",hour:"numeric",minute:"2-digit"});
+    $("lbLive").classList.toggle("stale",age>45);$("liveT").innerHTML=age>45?`Last reading <b>${ak} AK</b>, ${Math.round(age/60)} h ago`:`<b>Live</b> · updated ${ak} AK · ${Math.max(0,Math.round(age))} min ago`;
+    const out=avg([P["A:air out 1"],P["B:air out 1"]]);$("outV").innerHTML=`${f1(out)}<small>F</small>`;renderWall("A",P);renderWall("B",P);renderC(P);}
+  catch(e){$("liveT").textContent="Readings unavailable right now";$("wallA").innerHTML=$("wallB").innerHTML=$("wallC").innerHTML=""}
+  try{const H=await (await fetch(SRC+"history.json"+q,{cache:"no-store"})).json();lastRows=H.rows;chart(H.rows)}catch(e){}}
+load();setInterval(load,300000);
+let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>{if(lastRows)chart(lastRows)},200)});
+})();
+</script>
+<script>
+// Live cameras. Cloudflare Stream, live-only WebRTC (WHEP): no recording, no replay, no HLS fallback.
+// Public playback IDs only. Never put a publish (WHIP) address, key or token in this file.
+(function(){
+const BASE="https://customer-j6mbyw6pqpu12wvq.cloudflarestream.com/";
+const CAMS=[{label:"V Wall",id:"c2ee1ac3e0cfec60f1bde1a59dd1924b"},{label:"L Wall",id:"228846a26e9ba0cf378a38a7e7851da3"}];
+// The one schedule. The lab encoder runs these same hours (Kevin, 8 Nov). Hours are whole numbers, 24 hour clock.
+const SCHED={tz:"America/Anchorage",start:7,end:17,zone:"Alaska time"};
+const FAIL="Live video is temporarily unavailable. Please try again shortly.";
+const TEST=/[?&]camtest=1/.test(location.search); // preview testing only: ignores the schedule
+const BACKOFF=[2,4,8,15,30], STALL_MS=12000;
+const mins=()=>{const p=new Intl.DateTimeFormat("en-US",{timeZone:SCHED.tz,hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());const g=t=>+p.find(x=>x.type===t).value;return g("hour")*60+g("minute")};
+const inHours=()=>TEST||(mins()>=SCHED.start*60&&mins()<SCHED.end*60);
+const fmtH=h=>(h%12||12)+":00 "+(h<12?"AM":"PM");
+const offlineText=()=>"The lab cameras are offline. Live viewing resumes "+(mins()>=SCHED.end*60?"tomorrow at ":"at ")+fmtH(SCHED.start)+" "+SCHED.zone+".";
+const gather=(pc,ms)=>new Promise(res=>{if(pc.iceGatheringState==="complete")return res();const t=setTimeout(res,ms);pc.addEventListener("icegatheringstatechange",()=>{if(pc.iceGatheringState==="complete"){clearTimeout(t);res()}})});
+function Cam(cfg,box){
+  const v=box.querySelector("video"),msg=box.querySelector(".lb-msg"),btn=box.querySelector(".lb-go");
+  let pc=null,ctl=null,timer=null,stall=null,tries=0,active=false;
+  const show=(s,text,label)=>{box.dataset.state=s;msg.textContent=text||"";btn.hidden=!label;btn.textContent=label||"";v.controls=(s==="playing")};
+  function stop(){clearTimeout(timer);clearInterval(stall);if(ctl){ctl.abort();ctl=null}if(pc){pc.onconnectionstatechange=null;pc.ontrack=null;pc.close();pc=null}v.srcObject=null}
+  function offline(){stop();active=false;show("offline",offlineText())}
+  function retry(){stop();if(!active)return;if(!inHours()){offline();return}
+    if(tries>=BACKOFF.length){active=false;show("failed",FAIL,"Try again");return}
+    show("retrying","Reconnecting");timer=setTimeout(connect,BACKOFF[tries++]*1000)}
+  async function connect(){
+    stop();show("connecting","Connecting");
+    ctl=new AbortController();const mine=new RTCPeerConnection({bundlePolicy:"max-bundle"});pc=mine;
+    try{
+      mine.addTransceiver("video",{direction:"recvonly"});mine.addTransceiver("audio",{direction:"recvonly"});
+      const ms=new MediaStream();
+      mine.ontrack=e=>{ms.addTrack(e.track);if(v.srcObject!==ms)v.srcObject=ms;v.play().catch(()=>{})};
+      mine.onconnectionstatechange=()=>{if(pc!==mine)return;const s=mine.connectionState;
+        if(s==="failed"||s==="closed")retry();
+        else if(s==="disconnected")setTimeout(()=>{if(pc===mine&&mine.connectionState==="disconnected")retry()},4000)};
+      await mine.setLocalDescription(await mine.createOffer());await gather(mine,2000);
+      const r=await fetch(BASE+cfg.id+"/webRTC/play",{method:"POST",headers:{"content-type":"application/sdp"},body:mine.localDescription.sdp,signal:ctl.signal});
+      if(!r.ok)throw new Error("play "+r.status);
+      await mine.setRemoteDescription({type:"answer",sdp:await r.text()});
+    }catch(e){if(pc===mine&&!(e&&e.name==="AbortError"))retry()}
+  }
+  v.addEventListener("playing",()=>{tries=0;show("playing");let last=v.currentTime,since=Date.now();clearInterval(stall);
+    stall=setInterval(()=>{if(v.currentTime!==last){last=v.currentTime;since=Date.now()}else if(Date.now()-since>STALL_MS)retry()},3000)});
+  btn.addEventListener("click",()=>{active=true;tries=0;v.muted=true;connect()});
+  return{tick(){if(!inHours()){if(box.dataset.state!=="offline")offline()}else if(box.dataset.state==="offline")show("idle","","View live")},init(){inHours()?show("idle","","View live"):offline()}}}
+const pair=document.getElementById("camPair"),players=[];
+CAMS.forEach(c=>{const d=document.createElement("div");d.className="lb-cam";
+  d.innerHTML='<div class="lb-k">'+c.label+'</div><div class="lb-vid" data-state="idle"><video muted playsinline preload="none" aria-label="'+c.label+' live camera"></video><div class="lb-ov"><span class="lb-msg" role="status" aria-live="polite"></span><button type="button" class="lb-go" hidden></button></div></div>';
+  pair.appendChild(d);players.push(Cam(c,d.querySelector(".lb-vid")))});
+document.getElementById("camHours").textContent="Live video daily, "+fmtH(SCHED.start)+" to "+fmtH(SCHED.end)+" "+SCHED.zone+". Live only, with no recording. Video starts muted.";
+players.forEach(p=>p.init());setInterval(()=>players.forEach(p=>p.tick()),30000);
+})();
+</script>
+<dialog id="zoom" aria-label="Enlarged photo"><button class="zx" type="button" aria-label="Close photo">&times;</button><div class="zwrap"><img alt=""><p></p></div></dialog>
+<script>
+(function(){
+  // fold long bios on phones
+  var mq=window.matchMedia("(max-width:719px)");
+  if(mq.matches){document.querySelectorAll(".bio").forEach(function(b,i){
+    b.classList.add("clamp");b.id=b.id||"bio"+i;
+    if(b.scrollHeight<=b.clientHeight+6){b.classList.remove("clamp");return}
+    var btn=document.createElement("button");btn.type="button";btn.className="more-btn";btn.textContent="Read more";btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-controls",b.id);
+    btn.addEventListener("click",function(){var o=b.classList.toggle("open");btn.textContent=o?"Read less":"Read more";btn.setAttribute("aria-expanded",o)});
+    b.parentNode.insertBefore(btn,b.nextSibling)})}
+  // tap a photo to enlarge
+  var dlg=document.getElementById("zoom"),zi=dlg.querySelector("img"),zp=dlg.querySelector("p");
+  function open(img){zi.src=img.currentSrc||img.src;zi.alt=img.alt;
+    var cap=img.closest("figure")&&img.closest("figure").querySelector("figcaption");
+    if(!cap){var c=img.closest(".card");cap=c&&c.querySelector("p")}
+    zp.textContent=cap?cap.textContent.replace(/\s+/g," ").trim():img.alt;dlg.showModal()}
+  document.querySelectorAll(".fig img,.card img,.portrait,.renders img").forEach(function(img){
+    img.classList.add("zoomable");img.tabIndex=0;img.setAttribute("role","button");img.setAttribute("aria-label","Enlarge photo: "+img.alt);
+    img.addEventListener("click",function(){open(img)});
+    img.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();open(img)}})});
+  dlg.querySelector(".zx").addEventListener("click",function(){dlg.close()});
+  dlg.addEventListener("click",function(e){if(e.target===dlg||e.target.classList.contains("zwrap"))dlg.close()});
+})();
+</script>
+<script>
+(function(){
+  var btn=document.querySelector(".menubtn"),menu=document.getElementById("menu");
+  function set(o){menu.classList.toggle("open",o);btn.setAttribute("aria-expanded",o)}
+  btn.addEventListener("click",function(){set(!menu.classList.contains("open"))});
+  menu.addEventListener("click",function(e){if(e.target.closest("a"))set(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&menu.classList.contains("open")){set(false);btn.focus()}});
+  document.addEventListener("click",function(e){if(menu.classList.contains("open")&&!e.target.closest(".bar"))set(false)});
+})();
+</script>
+</body>
+</html>
