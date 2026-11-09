@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>North 50 Building Systems | Fairbanks, Alaska</title>
 <meta name="description" content="North 50 develops and tests complete building systems for demanding conditions. Window systems tested through Interior Alaska winters at our lab near Fairbanks.">
@@ -193,13 +192,6 @@ p.lede + p.lede{margin-top:14px}
 .lb-cams .lb-vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .lb-cams .lb-hours{font-family:var(--mono);font-size:12px;color:var(--steel);margin-top:calc(var(--u)*1.25)}
 .lb-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
-.lb-cams .lb-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
-.lb-ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:12px;text-align:center;font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.04em;color:var(--frost);background:rgba(14,19,48,.78)}
-.lb-vid[data-state=playing] .lb-ov{display:none}
-.lb-msg:empty{display:none}
-.lb-go{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:0;background:var(--amber);color:var(--midnight);font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.lb-go[hidden]{display:none}
-.lb-go:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
 @media (max-width:720px){.lb-cams .lb-pair{grid-template-columns:1fr}}
 .lb-chart{grid-column:1 / -1}
 .lb-chart h3{font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin:0 0 calc(var(--u)*1.5)}
@@ -494,11 +486,6 @@ main:focus{outline:none}
       <section class="lb-card lb-wall" id="wallA"></section>
       <section class="lb-card lb-wall" id="wallB"></section>
       <section class="lb-card lb-wall lb-c" id="wallC"></section>
-      <section class="lb-card lb-cams on" id="cams" aria-label="Live cameras">
-        <h3>Live cameras</h3>
-        <div class="lb-pair" id="camPair"></div>
-        <p class="lb-hours" id="camHours"></p>
-      </section>
       <section class="lb-card lb-chart" id="chartCard">
         <h3 id="chT">The last 24 hours</h3>
         <div id="chart"></div>
@@ -509,7 +496,7 @@ main:focus{outline:none}
     <div class="lb-lab-foot">
       <p class="lb-note">Measurements are posted every 15 minutes. All temperatures are in &deg;F, and times are shown in Alaska time. These readings show conditions during the test. Temperature readings alone do not establish a whole-window insulation rating.</p>
       <p class="lb-note"><b>V2 note.</b> V2 uses an installation that differs from the manufacturer&rsquo;s guidance so its performance can be compared with V1 and V3.</p>
-      <a class="lb-full" href="https://feldtdesign-ship-it.github.io/n50-lab-live/">Open the full lab dashboard &rarr;</a>
+      <a class="lb-full" href="lab/">Open the full lab dashboard &rarr;</a>
     </div>
 
     <div class="cards" style="margin-top:20px">
@@ -739,59 +726,6 @@ async function load(){const q="?t="+Math.floor(Date.now()/60000);
   try{const H=await (await fetch(SRC+"history.json"+q,{cache:"no-store"})).json();lastRows=H.rows;chart(H.rows)}catch(e){}}
 load();setInterval(load,300000);
 let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>{if(lastRows)chart(lastRows)},200)});
-})();
-</script>
-<script>
-// Live cameras. Cloudflare Stream, live-only WebRTC (WHEP): no recording, no replay, no HLS fallback.
-// Public playback IDs only. Never put a publish (WHIP) address, key or token in this file.
-(function(){
-const BASE="https://customer-j6mbyw6pqpu12wvq.cloudflarestream.com/";
-const CAMS=[{label:"V Wall",id:"c2ee1ac3e0cfec60f1bde1a59dd1924b"},{label:"L Wall",id:"228846a26e9ba0cf378a38a7e7851da3"}];
-// The one schedule. The lab encoder runs these same hours (Kevin, 8 Nov). Hours are whole numbers, 24 hour clock.
-const SCHED={tz:"America/Anchorage",start:7,end:17,zone:"Alaska time"};
-const FAIL="Live video is temporarily unavailable. Please try again shortly.";
-const TEST=/[?&]camtest=1/.test(location.search); // preview testing only: ignores the schedule
-const BACKOFF=[2,4,8,15,30], STALL_MS=12000;
-const mins=()=>{const p=new Intl.DateTimeFormat("en-US",{timeZone:SCHED.tz,hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date());const g=t=>+p.find(x=>x.type===t).value;return g("hour")*60+g("minute")};
-const inHours=()=>TEST||(mins()>=SCHED.start*60&&mins()<SCHED.end*60);
-const fmtH=h=>(h%12||12)+":00 "+(h<12?"AM":"PM");
-const offlineText=()=>"The lab cameras are offline. Live viewing resumes "+(mins()>=SCHED.end*60?"tomorrow at ":"at ")+fmtH(SCHED.start)+" "+SCHED.zone+".";
-const gather=(pc,ms)=>new Promise(res=>{if(pc.iceGatheringState==="complete")return res();const t=setTimeout(res,ms);pc.addEventListener("icegatheringstatechange",()=>{if(pc.iceGatheringState==="complete"){clearTimeout(t);res()}})});
-function Cam(cfg,box){
-  const v=box.querySelector("video"),msg=box.querySelector(".lb-msg"),btn=box.querySelector(".lb-go");
-  let pc=null,ctl=null,timer=null,stall=null,tries=0,active=false;
-  const show=(s,text,label)=>{box.dataset.state=s;msg.textContent=text||"";btn.hidden=!label;btn.textContent=label||"";v.controls=(s==="playing")};
-  function stop(){clearTimeout(timer);clearInterval(stall);if(ctl){ctl.abort();ctl=null}if(pc){pc.onconnectionstatechange=null;pc.ontrack=null;pc.close();pc=null}v.srcObject=null}
-  function offline(){stop();active=false;show("offline",offlineText())}
-  function retry(){stop();if(!active)return;if(!inHours()){offline();return}
-    if(tries>=BACKOFF.length){active=false;show("failed",FAIL,"Try again");return}
-    show("retrying","Reconnecting");timer=setTimeout(connect,BACKOFF[tries++]*1000)}
-  async function connect(){
-    stop();show("connecting","Connecting");
-    ctl=new AbortController();const mine=new RTCPeerConnection({bundlePolicy:"max-bundle"});pc=mine;
-    try{
-      mine.addTransceiver("video",{direction:"recvonly"});mine.addTransceiver("audio",{direction:"recvonly"});
-      const ms=new MediaStream();
-      mine.ontrack=e=>{ms.addTrack(e.track);if(v.srcObject!==ms)v.srcObject=ms;v.play().catch(()=>{})};
-      mine.onconnectionstatechange=()=>{if(pc!==mine)return;const s=mine.connectionState;
-        if(s==="failed"||s==="closed")retry();
-        else if(s==="disconnected")setTimeout(()=>{if(pc===mine&&mine.connectionState==="disconnected")retry()},4000)};
-      await mine.setLocalDescription(await mine.createOffer());await gather(mine,2000);
-      const r=await fetch(BASE+cfg.id+"/webRTC/play",{method:"POST",headers:{"content-type":"application/sdp"},body:mine.localDescription.sdp,signal:ctl.signal});
-      if(!r.ok)throw new Error("play "+r.status);
-      await mine.setRemoteDescription({type:"answer",sdp:await r.text()});
-    }catch(e){if(pc===mine&&!(e&&e.name==="AbortError"))retry()}
-  }
-  v.addEventListener("playing",()=>{tries=0;show("playing");let last=v.currentTime,since=Date.now();clearInterval(stall);
-    stall=setInterval(()=>{if(v.currentTime!==last){last=v.currentTime;since=Date.now()}else if(Date.now()-since>STALL_MS)retry()},3000)});
-  btn.addEventListener("click",()=>{active=true;tries=0;v.muted=true;connect()});
-  return{tick(){if(!inHours()){if(box.dataset.state!=="offline")offline()}else if(box.dataset.state==="offline")show("idle","","View live")},init(){inHours()?show("idle","","View live"):offline()}}}
-const pair=document.getElementById("camPair"),players=[];
-CAMS.forEach(c=>{const d=document.createElement("div");d.className="lb-cam";
-  d.innerHTML='<div class="lb-k">'+c.label+'</div><div class="lb-vid" data-state="idle"><video muted playsinline preload="none" aria-label="'+c.label+' live camera"></video><div class="lb-ov"><span class="lb-msg" role="status" aria-live="polite"></span><button type="button" class="lb-go" hidden></button></div></div>';
-  pair.appendChild(d);players.push(Cam(c,d.querySelector(".lb-vid")))});
-document.getElementById("camHours").textContent="Live video daily, "+fmtH(SCHED.start)+" to "+fmtH(SCHED.end)+" "+SCHED.zone+". Live only, with no recording. Video starts muted.";
-players.forEach(p=>p.init());setInterval(()=>players.forEach(p=>p.tick()),30000);
 })();
 </script>
 <dialog id="zoom" aria-label="Enlarged photo"><button class="zx" type="button" aria-label="Close photo">&times;</button><div class="zwrap"><img alt=""><p></p></div></dialog>
